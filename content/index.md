@@ -1,8 +1,22 @@
----
-title: Welcome to Quartz
----
+#HomeSweetHome 
 
-This is a blank Quartz installation.
-My name is Clemens Schmid
+----
+#### # About Myself
 
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+- Name: Clemens Schmid
+- Age: 18
+- Education: HTL Krems, Austria
+- Passion: Programming, Football
+
+Portfolio Website 
+(https://clemens-schmid.systems)
+
+---
+#### # What You'll Find Here
+
+Here, I share a collection of my notes, knowledge, and various interesting stuff. 
+Feel free to explore and learn with me.
+
+> "Stay positive, work hard, make it happen."
+
+---
