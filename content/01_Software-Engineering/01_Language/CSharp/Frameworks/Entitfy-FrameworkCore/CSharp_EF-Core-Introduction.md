@@ -126,4 +126,37 @@ In the context of EF Core:
 	2. use migration tools to update db accordingly
 
 ---
+## # Connection String
+
+.Api > appsettings.json
+
+```json
+{  
+  "Logging": {  
+    "LogLevel": {  
+      "Default": "Information",  
+      "Microsoft.AspNetCore": "Warning"  
+    }  
+  },  
+  "AllowedHosts": "*",  
+  "ConnectionStrings": {  
+    "Default" : "Host=localhost; Username=root; Password=root; Database=db"  
+  }  
+}
+```
+
+also make sure to add in .Api > program.cs:
+
+```csharp
+builder.Services.AddDbContextFactory<TimetableDbContext>(  
+    options => options.UseNpgsql(  
+        builder.Configuration.GetConnectionString("Default"))  
+);
+```
+
 ---
+### # Data Seeding
+
+```csharp
+
+```
