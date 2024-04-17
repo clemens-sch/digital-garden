@@ -3,6 +3,9 @@
 ---
 #### # search
 	alt + f
+
+#### # search (find text)
+	alt + o
 #### # show graph
 	alt + g
 #### # new note
@@ -14,3 +17,4 @@
 	alt  + 4   == h4
 #### # highlight
 	alt  + p   == background-color: purple
+

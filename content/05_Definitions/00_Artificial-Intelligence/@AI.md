@@ -7,7 +7,4 @@
 #### # Python Context
 - [[@NumPy]]
 - [[@Pandas]]
----
-#### # ML Tools
-- [[__Gretl]]
----
+

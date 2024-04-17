@@ -5,7 +5,7 @@
 
 `Natural Language Processing`
 
-- Subfield of [[__AI]]
+- Subfield of [[@AI]]
 
 NLP is used that computers understand unstructured text
 - because humans don't communicate with numbers, ...

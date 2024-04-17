@@ -1,15 +1,19 @@
 #Services
+
 [[🧠 Second Brain 🧠]]
 
 ---
 ## # Services
 
 #### # 01-Docker
-- [[__Docker]]
+
+- [[@Docker]]
 ---
 #### # 02-GitHub
-- [[__GitHub]]
+
+- [[@GitHub]]
 ---
 #### # 03-XAMPP
-- [[__XAMPP]]
+
+- [[@XAMPP]]
 ---

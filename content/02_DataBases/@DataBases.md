@@ -3,7 +3,7 @@
 
 ---
 #### # 00-Definitions
-- [[__DB-Definitions]]
+- [[@DB-Definitions]]
 ---
 #### # 01-Languages
 - [[@SQL]]

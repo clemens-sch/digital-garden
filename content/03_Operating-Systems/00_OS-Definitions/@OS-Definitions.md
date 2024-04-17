@@ -1,4 +1,4 @@
 #Operating-Systems 
-[[__Operating-Systems]]
+[[@Operating-Systems]]
 
 ---

@@ -250,5 +250,4 @@ Route handlers support the following types of return values:
 |`string`|Framework writes string directly to response|
 |`T` (Any other type)|Framework JSON-serializes the response|
 
----
 
