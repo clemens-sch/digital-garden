@@ -111,8 +111,8 @@ export default ((userOpts?: Partial<Options>) => {
         <div id="explorer-content">
           <ul class="overflow" id="explorer-ul">
             {/* Nur den Knoten mit dem Namen "🧠 Second Brain 🧠" anzeigen */}
-            {fileTree && fileTree.children.map((node) => {
-              if (node.displayName === "🧠 Second Brain 🧠") {
+            {fileTree.children.map((node) => {
+              if (node.displayName === "🧠Second Brain🧠") {
                 return <ExplorerNode node={node} opts={opts} fileData={fileData} />
               }
               return null

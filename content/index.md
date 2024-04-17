@@ -8,7 +8,7 @@
 - Education: HTL Krems, Austria
 - Passion: Programming, Football
 
-(https://cjschmid.net/me)
+https://cjschmid.net/me
 
 ---
 #### # What You'll Find Here
