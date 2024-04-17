@@ -110,13 +110,7 @@ export default ((userOpts?: Partial<Options>) => {
         </button>
         <div id="explorer-content">
           <ul class="overflow" id="explorer-ul">
-            {/* Nur den Knoten mit dem Namen "🧠 Second Brain 🧠" anzeigen */}
-            {fileTree.children.map((node) => {
-              if (node.displayName === "🧠Second Brain🧠") {
-                return <ExplorerNode node={node} opts={opts} fileData={fileData} />
-              }
-              return null
-            })}
+            <ExplorerNode node={fileTree} opts={opts} fileData={fileData} />
             <li id="explorer-end" />
           </ul>
         </div>
