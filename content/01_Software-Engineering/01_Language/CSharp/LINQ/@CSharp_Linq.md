@@ -33,7 +33,7 @@ A Linq Query consists of 3 steps:
 ---
 ## # Linq - Data Source
 
-Linq heavily build on the <mark style="background: #D2B3FFA6;">IEnumerable</mark> and <mark style="background: #D2B3FFA6;">IQueryable</mark> interfaces. Whenever a data source implements one of these interfaces, Linq can be used to query the data behind it.
+Linq heavily build on the *IEnumerable* and *IQueryable* interfaces. Whenever a data source implements one of these interfaces, Linq can be used to query the data behind it.
 
 _IEnumerable_ - return element after element
 _IQueryable_ - more powerful: allows to query & return element after element
@@ -956,3 +956,4 @@ var query =
 var query = players
 	.Where(p => p.Points == players.Max(p1 => p1.Points));
 ```
+

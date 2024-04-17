@@ -3,8 +3,8 @@
 ---
 #### # Language
 
-- [[__SQL]]
-- [[__CSS]]
-- [[XPath]]
+- [[@SQL]]
+- [[@CSS]]
+- [[@XPath]]
 
 ---

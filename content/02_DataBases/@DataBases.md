@@ -6,7 +6,7 @@
 - [[__DB-Definitions]]
 ---
 #### # 01-Languages
-- [[__SQL]]
+- [[@SQL]]
 - [[Oracle-SQL]]
 - [[__MongoDB]]
 - [[XML]]

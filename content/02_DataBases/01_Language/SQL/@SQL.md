@@ -16,6 +16,7 @@
 ## Grundbefehle:
 
 #### Anzeige DBs - Rechte
+
 ```MySQL
 # Benuterrechte anzeigen
 SHOW GRANTS;
@@ -28,6 +29,7 @@ SHOW DATABASES;
 ```
 
 #### Löschen/Erstellen einer DB
+
 ```MySQL
 DROP DATABASE IF EXISTS dbname;
 
@@ -35,17 +37,20 @@ CREATE DATABASE dbname CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 #### Schema einstellen
+
 ```MySQL
 USE dbname;
 ```
 
 #### Löschen von Tables in einer DB
+
 ```MySQL
 DROP TABLE IF EXISTS table1
 DROP TABLE table2
 ```
 
 #### Erstellen von Tables
+
 ```MySQL
 CREATE TABLE tablename
 (
@@ -56,14 +61,7 @@ CREATE TABLE tablename
 ```
 
 #### Einträge in Tables
+
 ```MySQL
 INSERT INTO tablename (ATTRIBUTE, ATTRIBUTE2) VALUES ("1", 100 000)
-```
-
-#### Union
-
-get associations
-
-```MySQL
-
 ```

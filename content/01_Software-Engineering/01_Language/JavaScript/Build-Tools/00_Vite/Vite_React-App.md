@@ -1,8 +1,7 @@
 #Software-Engineering 
 
 ---
-## # Create React Application
-__using Vite__
+## # Create React-Vite Application
 
 _Make sure to have `NodeJS` (npm) installed!_
 

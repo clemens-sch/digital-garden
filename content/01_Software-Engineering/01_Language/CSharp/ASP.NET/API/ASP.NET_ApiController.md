@@ -27,6 +27,8 @@ Api-Controllers handle HTTP requests & return data, that a client can consume.
 ---
 ### # Dependency Injection
 
+- [[SE_Dependency-Injection]]
+
 #### # Constructor Injection
 
 When you create an instance of a class, we specify which other parts of our code it should use directly during its creation.
@@ -59,4 +61,3 @@ builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 app.MapControllers();
 ```
 
----

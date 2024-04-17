@@ -4,12 +4,12 @@
 #### # Introduction
 
 - [[JS_Definition]]
-- [[__JS_Topics]]
+- [[@JS_Topics]]
 
 ---
 #### # Technologies
 
-- [[__Next.js]]
-- [[__React]]
+- [[@Next.js]]
+- [[@React]]
 
 ---

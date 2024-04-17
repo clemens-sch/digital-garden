@@ -2,7 +2,7 @@
 
 ---
 #### # Hardware-Languages: 
-- [[__C]] 
+- [[@C]] 
 ----
 #### # Topics
 - [[MC_Special-Function-Register]]

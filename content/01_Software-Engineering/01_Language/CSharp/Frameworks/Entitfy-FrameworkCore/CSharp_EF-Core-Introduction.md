@@ -154,9 +154,3 @@ builder.Services.AddDbContextFactory<TimetableDbContext>(
 );
 ```
 
----
-### # Data Seeding
-
-```csharp
-
-```

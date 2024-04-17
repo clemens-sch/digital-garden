@@ -5,8 +5,8 @@
 - [[__AI-Definitions]]
 ---
 #### # Python Context
-- [[05_Definitions/00_Artificial-Intelligence/__NumPy]]
-- [[__Pandas]]
+- [[@NumPy]]
+- [[@Pandas]]
 ---
 #### # ML Tools
 - [[__Gretl]]

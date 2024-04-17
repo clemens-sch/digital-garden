@@ -3,17 +3,17 @@
 
 ----
 #### # 00-Definitions
-- [[__SE-Definitions]]
+- [[@SE-Definitions]]
 ---
 #### # 01-Languages
-- [[__C]]
-- [[__CSharp]]
-- [[__Py]]
-- [[__Javascript]]
+- [[@C]]
+- [[@CSharp]]
+- [[@Python]]
+- [[@Javascript]]
 ---
 #### # 03-Query-Languages
-- [[XPath]]
+- [[@XPath]]
 ---
 #### # 04-Projects
-- [[__Projects]]
+- [[@Projects]]
 ---
