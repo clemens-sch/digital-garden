@@ -12,11 +12,6 @@ The output should look like the following:
 ![[Pasted image 20240424101701.png]]
 
 ---
-## # Intro: MNIST dataset
-
-
-
----
 ## # Implementation
 
 Get MNIST-dataset
