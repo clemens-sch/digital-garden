@@ -44,6 +44,7 @@ console.log(nums)  // [10, 2, 3]
 represents integers & decimal values 
 
 ##### # Math Object
+
 provides lots of methods to work with numbers
 
 ```JavaScript
@@ -98,6 +99,7 @@ console.log("hello ${randomNum}")
 ```
 
 ##### # String Methods
+
 Each character in a string can be accessed by using its index. 
 Every Index starts with 0 - ends with length of string -1
 

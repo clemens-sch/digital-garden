@@ -138,6 +138,16 @@ public class WeatherForecast
 }
 ```
 
+The output of the serialized JSON will look as the following:
+
+```json
+{ 
+	"Date": "2019-08-01T00:00:00+00:00", 
+	"TemperatureCelsius": 25, 
+	"Summary": "Hot" 
+}
+```
+
 ---
 ## # System.Text.Json - Serialization Behavior
 
@@ -173,4 +183,21 @@ public class WeatherForecast
 	public string? Summary { get; set; }
 }
 ```
----
+
+Nun hätte man auf die deserialisierten Daten zugriff:
+
+```csharp
+var? weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString); 
+
+if (weatherForecast != null) 
+{ 
+	Console.WriteLine($"Date: {weatherForecast.Date}");
+	Console.WriteLine($"Temperature Celsius: {weatherForecast.TemperatureCelsius}"); 
+	Console.WriteLine($"Summary: {weatherForecast.Summary}"); 
+}
+
+// Output
+Date: 8/1/2019 7:00:00 AM -07:00
+Temperature Celsius: 25
+Summary: Hot
+```
