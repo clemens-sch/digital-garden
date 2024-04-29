@@ -12,6 +12,7 @@ Is modifiable.
 ### # Sample arr examples
 
 array with one data type
+
 ```js
 const numbers = [0, 3.14, 9.81, 37, 98.6, 100] // array of numbers
 
@@ -26,6 +27,7 @@ Number of numbers: 6
 ```
 
 array with different data types
+
 ```js
 const arr = [
   'Clemens',
@@ -38,6 +40,7 @@ console.log(arr)
 ```
 
 array within an array
+
 ```js
 const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
 const backEnd = ['Node', 'Express', 'MongoDB']
@@ -59,6 +62,7 @@ console.log(firstFruit) // banana
 ```
 
 ### # Modifying array items
+
 Once an array is created, we can modify the contents of array elements.
 
 ```js
@@ -70,6 +74,7 @@ console.log(numbers) // [10, 20, 3, 4, 5]
 ```
 
 ### # array manipulating methods
+
 Here are some available methods
 
 ```js
@@ -183,33 +188,43 @@ Okay, so why do we need these 2 functions?
 Image we have an array with string-names.
 
 The .map() function will go through each element in an array.
-
-```js
-let names = ["Pedro", "Jack", "Jessica"];
-
-names.map((name) => {
-	// each name will be outputed
-	console.log(name);
-})
-```
-
 And we want to add a "1" at the end of each name. So we gonna use the .map() method to override each element.
 
 ```js
-names.map((name) => {
-	return name + "1";
-})
-```
+let names = ["Pedro", "Jack", "Jessica"]; 
 
+// Using .map() to add "1" at the end of each name 
+let modifiedNames = names.map((name) => 
+	{ return name + "1"; }); 
+
+console.log(modifiedNames); // Output: ["Pedro1", "Jack1", "Jessica1"]
+```
 
 Also, the .filter() function loops through every element in an array.
 
 ```js
 let names = ["Jessica", "Carol", "Pedro"];
 
-names.filter((name) => {
-	return name !== "Pedro"
+// Using .filter() to remove the name "Pedro" from the array
+let filteredNames = names.filter((name) => {
+    return name !== "Pedro";
 });
+
+console.log(filteredNames); // Output: ["Jessica", "Carol"]
 ```
 
 ---
+## # Advanced Methods
+
+When using numbers.
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// .REDUCE()
+// accumulator - start: with value 0
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(sum); // Output: 15
+```
+

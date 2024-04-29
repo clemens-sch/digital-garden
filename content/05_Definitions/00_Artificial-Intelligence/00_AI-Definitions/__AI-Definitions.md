@@ -11,6 +11,11 @@
 	- [[AI_NLP]]
 
 ---
+#### # Exercises
+
+- [[AI_MNIST-Dataset]], [[MNIST_compressedFile.pdf]]
+
+---
 #### # Austria
 
 - 2023: [[AI_Landscapes-Austria]]
