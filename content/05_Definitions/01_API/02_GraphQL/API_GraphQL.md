@@ -385,7 +385,6 @@ await RewardClient.AddReward.ExecuteAsync(
 GraphQL offers an easy way to subscribe to events.  
 The Server can notify the client of changes via a websocket connection.
 
-
 ![[Pasted image 20240411082214.png]]
 
 ---
@@ -419,12 +418,7 @@ public async Task<RewardListItemDto> AddReward(
 ```
 
 ---
-
-[
-
 ## # Registration
-
-](https://deep-thought.norwin.at/tech-kb/web-development/GraphQL/#registration-1)
 
 ```csharp
 // Program.cs

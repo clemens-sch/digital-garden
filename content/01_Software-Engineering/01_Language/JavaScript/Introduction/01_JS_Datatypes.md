@@ -108,7 +108,7 @@ let string2 = 'I love JavaScript. If you do not love JavaScript what else can yo
 let string1 = 'JavaScript'
 let string = '  30 Days Of JavaScript  '
 
-console.log(string1.length) // index of string - 9
+console.log(string1.length) // length of string - 9
 
 console.log(string1.toUpperCase())     // JAVASCRIPT
 console.log(string1.toLowerCase())     // javascript

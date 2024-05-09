@@ -1,4 +1,5 @@
 #Definitions 
+
 [JSON-Validator](https://www.jsonschemavalidator.net/)
 
 ---
