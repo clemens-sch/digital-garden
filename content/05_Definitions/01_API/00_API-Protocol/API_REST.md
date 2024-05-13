@@ -211,4 +211,3 @@ A response consists of
 | 404         | Not Found             | Requested resource could not be found                            |
 | 418         | I’m a teapot          | April fools joke by the IETF                                     |
 | 500         | Internal Server Error | Unspecified error on the server happened.                        |
-
