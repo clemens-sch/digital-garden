@@ -167,4 +167,3 @@ Let's say we want to update a single subject (specific id) using our REST-Api.
 }
 ```
 
----

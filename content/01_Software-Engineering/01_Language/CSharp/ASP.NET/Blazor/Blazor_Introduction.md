@@ -466,15 +466,12 @@ Every Razor component inherits from `ComponentBase` in which these lifecycle m
 ---
 ### # SetParametersAsync
 
+This method is called when the parameters for the component are being loaded.
+You can intercept the parameters and do actions based on them.
+
 ```csharp
 <div> ... </div>
 @code {
-    /*
-    * This method is called when the parameters 
-    * for the component are being loaded.
-    * You can intercept the parameters and 
-    * do actions based on them.
-    */
     protected override Task SetParametersAsync(
        ParameterView parameters
 ) {...} }
@@ -483,14 +480,13 @@ Every Razor component inherits from `ComponentBase` in which these lifecycle m
 ---
 ### # OnInitializedAsync
 
+This method is called so you can initialize the internal fields of the component.
+It only runs once!
+Use this instead of a constructor.
+
 ```csharp
 <div> ... </div>
 @code {
-    /* 
-     * This method is called so you can initialize 
-     * the internal fields of the component.
-     * Use this instead of a constructor.
-     */
     protected override Task OnInitialisedAsync() {...}
 }
 ```
@@ -498,12 +494,12 @@ Every Razor component inherits from `ComponentBase` in which these lifecycle m
 ---
 ### # OnParametersSetAsync
 
+This method is called when parameters are changed.
+Runs every time the value changes!
+
 ```csharp
 <div> ... </div>
 @code {
-/*
-* This method is called when parameters are changed.
-*/
     protected override Task OnParametersSetAsync() {...}
 }
 ```
@@ -511,13 +507,11 @@ Every Razor component inherits from `ComponentBase` in which these lifecycle m
 ---
 ### # OnAfterRenderAsync
 
+This method is called, after the component has been rendered on the page.
+
 ```csharp
 <div> ... </div>
 @code {
-    /*
-    * This method is called, after the component 
-    * has been rendered on the page.
-    */
     protected override Task OnAfterRenderAsync() {...}
 }
 ```
