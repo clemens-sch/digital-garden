@@ -5,7 +5,7 @@
 ---
 # # gRPC
 
-
+![[Pasted image 20240516091318.png]]
 
 ---
 ## # What does it mean?
@@ -24,7 +24,7 @@
 - X ⇔ Y Communication
 
 ---
-## # Transport channel ¯\_(ツ)_/¯
+## # Transport channel (ツ)
 
 gRPC is agnostic about the transport channel.
 

@@ -649,6 +649,86 @@ To inject dependent types into Razor components, use the `inject` directive.
 ```
 
 ---
+## # Binding
+
+There are 2 directions of data flow when working with values in Blazor:
+
+- Binding the value of a variable to an element on the page, so that when the value of the variable changes, the updated value gets shown on the page.
+- Binding the value of an input element on the page to a variable, so that when the user enters a value on the page, the value of the variable gets updated.
+
+---
+## # Binding: variable to component
+
+We already know how to achieve this, by simply using the Razor syntax to render the value of a variable.
+
+```csharp
+<p>@message</p>
+<input type="text" value="@message" />
+
+@code {
+	private string message = "Hello";
+}
+```
+
+Whenever the value of the variable message changes, the changes will be reflected on the rendered page.
+
+---
+## # Binding: input element to variable
+
+There are 2 ways of achieving this:
+
+- Change event handlers
+- 2-way binding
+
+---
+## # Change event handlers
+
+You can register an event handler to listen on changes of an input element.
+
+```csharp
+<input type="text" @oninput="OnChange"/>
+
+@code {
+    private void OnChange(ChangeEventArgs obj)
+    {
+        var updatedValue = obj.Value as string;
+    }
+}
+```
+
+---
+## # 2-way binding
+
+You can combine the two binding variants to achieve a two-way binding, where an input element updates a variable and the other way round.
+
+```csharp
+<input type="text" @oninput="OnChange" value="@message">
+</input>
+
+@code {
+    private string message = "Hello";
+
+    private void OnChange(ChangeEventArgs obj)
+    {
+        message = obj.Value as string ?? message;
+    }
+}
+```
+
+---
+## # 2-way binding (2)
+
+Instead of wiring up the 2-way binding manually, you can use the predefined `@bind-value` directive, which does exactly that for you - show the value of the variable in HTML and use an event handler to update the variable in your code upon user inputs.
+
+```csharp
+<input type="text" @bind-value="message"/>
+
+@code {
+    private string message = "Hello";
+}
+```
+
+---
 ## # Forms
 
 Forms are used to capture and process data, entered by users.

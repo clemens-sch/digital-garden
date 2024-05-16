@@ -6,6 +6,7 @@
 Cross-Industry Standard Process for Data Mining
 
 Is a standardized approach to data mining projects.
+CRISP-DM breaks down Data Mining in 6 easy steps.
 
 ---
 ## # Steps
@@ -34,6 +35,7 @@ Is a standardized approach to data mining projects.
 2. Data Science
 	1. scientific methods, algorithms, systems to extract knowledge & insights from data
 	2. statistics, ML, DM, visualization to analyze complex problems
+	3. work in all 6 fields of CRISP
 3. Explorative Dataanalysis (EDA)
 	1. analyze datasets to summarize their main characteristics
 	2. understanding data's structure, patterns, relationships
