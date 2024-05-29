@@ -1,4 +1,5 @@
 #Definitions 
+
 [Main-Source](https://deep-thought.norwin.at/tech-kb/web-development/GraphQL/)
 
 ---
@@ -116,6 +117,13 @@ Should yield result:
 
 ---
 ## # Add connection to database
+
+**Attributes**
+
+- UseProjection: Only selecting specific fields ("projection")
+- UseFiltering: Allows filtering to query 
+- UseSorting: Allows sorting the results
+- Service: Something gets resolved using DI
 
 ```csharp
 public class Query  
@@ -266,10 +274,9 @@ dotnet build
 ```csharp
 // Program.cs
 builder.Services  
-    .AddRewardClient()  
-    .ConfigureHttpClient(client => 
-      client.BaseAddress = new Uri(
-        builder.HostEnvironment.BaseAddress + "graphql"));
+    .AddGraphQLClient()  
+    .ConfigureHttpClient(client =>  
+        client.BaseAddress = new Uri("https://localhost:7080/graphql"));
 ```
 
 ---

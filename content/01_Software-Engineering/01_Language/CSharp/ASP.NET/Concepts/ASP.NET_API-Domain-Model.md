@@ -125,7 +125,7 @@ public class TeacherRepository
 ## # API
 
 This layer is responsible for assigning data. 
-For assigning data we use Api-Controller
+			For assigning data we use Api-Controller
 - Controllers > GenericController, FirstController, ...
 
 ---
