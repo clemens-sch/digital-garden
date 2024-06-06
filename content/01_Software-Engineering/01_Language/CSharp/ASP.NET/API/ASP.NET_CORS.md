@@ -22,14 +22,10 @@ to fetch the resource with CORS disabled.
 ---
 ## # Enabling CORS
 
-Open the `Program.cs` (Startup.cs) file.
-
-Add the following lines to you file
-
 ```csharp
+// Program.cs
 var corsOrigin = "corsOrigin";
 
-// builder initialization
 builder.Services.AddCors(options =>  
 {  
     options.AddPolicy(corsOrigin,  
@@ -41,8 +37,21 @@ builder.Services.AddCors(options =>
         });  
 });
 
-// app initialization
 app.UseCors(corsOrigin);
+```
+
+OR
+
+```csharp
+// Program.cs
+builder.Services.AddCors();
+
+app.UseCors(cpb =>  
+{  
+    cpb.AllowAnyHeader()  
+        .AllowAnyMethod()  
+        .AllowAnyOrigin();  
+});
 ```
 
 ---

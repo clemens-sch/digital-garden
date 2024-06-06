@@ -3,6 +3,9 @@
 ---
 ## # Data Transfer Object
 
+To manage data-transmission from 
+- Client --> Server / Server --> Client
+
 Data transfer objects - as the name implies - are objects that are used to transfer data.
 
 Very often this means sending data over a network boundary - for example via a REST-API.
