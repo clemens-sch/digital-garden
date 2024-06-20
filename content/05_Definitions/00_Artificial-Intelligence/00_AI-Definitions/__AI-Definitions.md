@@ -9,6 +9,7 @@
 - [[AI_MSE]]
 - [[AI_Use Cases]]
 	- [[AI_NLP]]
+- [[AI_Perceptron]]
 
 ---
 #### # Exercises
