@@ -16,6 +16,7 @@
 - **Best practice** and **Industry standard**
 
 ---
+## # Without Version Control
 
 ![vc-xkcd.jpg](https://deep-thought.norwin.at//tech-kb/git/assets/vc-xkcd.jpg)
 
@@ -32,12 +33,7 @@
     - A distinct line of development
 
 ---
-
-[
-
 ## # Distributed Version Control
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#distributed-version-control)
 
 - Every user has a full copy of the repository
 - Repositories can be synchronized (push/fetch)
@@ -50,25 +46,15 @@
 ![git_xkcd.png](https://deep-thought.norwin.at//tech-kb/git/assets/git_xkcd.png)
 
 ---
-
-[
-
 ## # Git
 
-](https://deep-thought.norwin.at/tech-kb/git/Git/#git-2)
-
 - Started in 2005 by Linus Torvalds
-- Used for Linux Kernel development
+- Used for Linux Kernel development - is still used
 - Highly distributed
 - Cryptographic integrity
 
 ---
-
-[
-
 ## # Install & Setup
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#install--setup)
 
 - Install - [https://www.git-scm.com](https://www.git-scm.com/)
 - Set user information
@@ -79,22 +65,12 @@ git config --global user.email 'n.winkler@htlkrems.at'
 ```
 
 ---
-
-[
-
 ## # Cheat Sheet
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#cheat-sheet)
 
 [https://education.github.com/git-cheat-sheet-education.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
 
 ---
-
-[
-
 ## # Creating Repositories
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#creating-repositories)
 
 - Create a new local repository
 
@@ -107,13 +83,9 @@ $ cd new_dir
 ```
 
 ---
-
-[
-
 ## # Adding files
 
-](https://deep-thought.norwin.at/tech-kb/git/Git/#adding-files)
-
+- "staging"
 - Adding new files
 - Current state of the file is recorded
 
@@ -124,12 +96,7 @@ git add foo.txt
 ```
 
 ---
-
-[
-
 ## # Writing history
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#writing-history)
 
 - Permanently save your work
 - [The seven rules of a great Git commit message](https://cbea.ms/git-commit/)
@@ -139,12 +106,7 @@ $ git commit -m "Showcased how to add files to git"
 ```
 
 ---
-
-[
-
 ## # Updating Files
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#updating-files)
 
 - Tell Git about new changes
 - Same thing as adding new files (Git only cares about the content of files)
@@ -157,52 +119,37 @@ $ git commit -m 'updated file'
 ```
 
 ---
-
-[
-
 ## # Browsing history
 
-](https://deep-thought.norwin.at/tech-kb/git/Git/#browsing-history)
+- Branch "master" == "main"
 
 ```bash
 $ git log
-commit 87bebde3c4c24c34f8b61d3332ac18df416d28c7
-Author: norwin <me@norwin.at>
-Date:   Tue Jun 11 04:35:35 2024 +0200
+commit 1238062398b6727455abe88e6b789ca041f62ecd (HEAD -> master)
+Author: clemens-sch <c.schmid@test.at>
+Date:   Thu Jun 20 08:23:22 2024 +0200
 
-    Updated file
+    added second line. blablabla
 
-commit f49e31ed76c07887481bea4ba4dffd606b794c45
-Author: norwin <me@norwin.at>
-Date:   Tue Jun 11 04:32:13 2024 +0200
-
-    Showcased how to add files to git
+commit 94c02addc225374619b842bca1cc34b5fc6df305
+Author: clemens-sch <c.schmid@test.at>
+Date:   Thu Jun 20 08:20:27 2024 +0200
 ```
 
 ---
-
-[
-
 ## # Working copy status
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#working-copy-status)
 
 - Shows list of modified, new and staged files
 - Also reminds you of important commands
 
 ```bash
 $ git status
-On branch main
-nothing to commit (working directory clean)
+On branch master
+nothing to commit, working tree clean
 ```
 
 ---
-
-[
-
 ## # Inspecting changes
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#inspecting-changes)
 
 - Show current changes
 - Show differences between commits
@@ -215,12 +162,7 @@ $ git diff branch1 branch2
 ```
 
 ---
-
-[
-
 ## # What the fork?
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#what-the-fork)
 
 - Try out new features
 - In an ideal world: one branch per feature
@@ -239,12 +181,7 @@ main
 ```
 
 ---
-
-[
-
 ## # Merging changes
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#merging-changes)
 
 - Integrate changes from a branch
 - Integrate changes from others
@@ -257,12 +194,7 @@ $ git merge newbranch
 ```
 
 ---
-
-[
-
 ## # Merge conflicts
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#merge-conflicts)
 
 - Merges don’t always go well
 - Git inserts conflict markers into conflicting files
@@ -288,12 +220,7 @@ $ git commit
 ```
 
 ---
-
-[
-
 ## # Forking existing projects
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#forking-existing-projects)
 
 - Get a copy of the repository
 - `fetch` + `merge` to update your copy
@@ -307,12 +234,7 @@ $ git merge origin/branch
 ```
 
 ---
-
-[
-
 ## # Syncing changes
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#syncing-changes)
 
 - Fetch downloads the latest changes from the remote repository
 - With merge you can merge these changes with your local branch
@@ -327,12 +249,7 @@ $ git push
 ```
 
 ---
-
-[
-
 ## # Links and references
-
-](https://deep-thought.norwin.at/tech-kb/git/Git/#links-and-references)
 
 - [git-scm.com](http://git-scm.com/)
 - [Pro Git Book](https://git-scm.com/book/de/v2)
@@ -341,3 +258,5 @@ $ git push
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [Learn Git Branching](https://learngitbranching.js.org/)
 - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
+---
