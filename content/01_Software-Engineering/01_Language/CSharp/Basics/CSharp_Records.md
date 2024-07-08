@@ -269,8 +269,7 @@ Override the `ToString` method:
 ```csharp
 public override string ToString()
 {
-	// normally this should not be commented out...
-	// return $"Person {{ FirstName = {FirstName}, LastName = {LastName}, Age = {Age} }}";
+	...
 }
 ```
 
