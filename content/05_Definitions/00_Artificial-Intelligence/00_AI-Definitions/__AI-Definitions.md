@@ -3,7 +3,7 @@
 ---
 #### # Definitions
 
-- [[AI_ML-DL]]
+- [[AI_AI-ML-DL]]
 - [[AI_Learning Methods]]
 - [[AI_Confusion Matrix]]
 - [[AI_MSE]]

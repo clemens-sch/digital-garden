@@ -7,7 +7,7 @@
 ## # Perceptron / Neural Network
 
 They form the base of Deep-Learning (subfield of ML)
-- [[AI_ML-DL]]
+- [[AI_AI-ML-DL]]
 
 Algorithms are inspired by human brain.
 Neural Networks take data - train themselfes - predict the output.
