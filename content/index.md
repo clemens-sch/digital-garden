@@ -8,7 +8,9 @@
 - Education: HTL Krems, Austria
 - Passion: Programming, Football
 
-https://cjschmid.net/me
+https://clejs.com
+
+[![Linkedin](https://i.sstatic.net/gVE0j.png) LinkedIn](https://www.linkedin.com/in/clemens-schmid-56159a2aa)
 
 ---
 #### # What You'll Find Here

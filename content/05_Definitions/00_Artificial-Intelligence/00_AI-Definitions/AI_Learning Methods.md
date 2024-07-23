@@ -7,11 +7,11 @@
 
 There are several forms an AI can learn 
 
-| method                 | explanation                                                                                                               | example               |     |
+| Method                 | Explanation                                                                                                               | Example               |     |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------- | --- |
-| Supervised Learning    | Learning with labeled data; <br>predicting outcomes based on known examples (e.g., image classification, spam detection). | image classification  |     |
-| Unsupervised Learning  | Learning without labeled data; <br>finding patterns and structure in data (e.g., clustering, dimensionality reduction).   | recommendation System |     |
-| Reinforcement Learning | Learning through feedback                                                                                                 | Roboter               |     |
+| Supervised Learning    | Learning with labeled data; <br>predicting outcomes based on known examples (e.g., image classification, spam detection). | Image classification  |     |
+| Unsupervised Learning  | Learning without labeled data; <br>finding patterns and structure in data (e.g., clustering, dimensionality reduction).   | Recommendation System |     |
+| Reinforcement Learning | Learning through rewarding feedback                                                                                       | Roboter               |     |
 | Generative Ai          | Learning through statistics - finds data                                                                                  | ChatGPT               |     |
 
 ---
