@@ -15,7 +15,7 @@ export default ((opts?: Options) => {
       <footer class={`${displayClass ?? ""}`}>
         <hr />
         <p>
-          <a href="https://cjschmid.net/">cjschmid.net</a>
+          <a href="https://clejs.com/">clejs.com</a>
         </p>
       </footer>
     )
