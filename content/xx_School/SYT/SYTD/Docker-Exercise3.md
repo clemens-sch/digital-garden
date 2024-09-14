@@ -1,3 +1,4 @@
+#school 
 
 Get to know the following commands. Play around with your Docker environment and try out all the commands.
 ## # Tag an image

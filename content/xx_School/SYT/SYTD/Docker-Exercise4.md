@@ -1,3 +1,6 @@
+#school 
+
+---
 In this exercise you will write your own Dockerfiles to dockerize 2 applications.
 ## # Preparation
 
