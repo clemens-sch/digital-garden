@@ -1,5 +1,0 @@
-#Operating-Systems 
-
-[[🧠 Second Brain 🧠]]
-
----

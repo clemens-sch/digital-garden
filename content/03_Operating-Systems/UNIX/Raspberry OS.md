@@ -1,3 +1,0 @@
-#OS 
-
-[[Install-NextCloud (Docker)]]

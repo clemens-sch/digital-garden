@@ -1,13 +1,13 @@
 #HomeSweetHome
 
 ---
-## # Dashboard
+
+#### [Ooh, it's just me, myself and I](https://open.spotify.com/track/40YcuQysJ0KlGQTeGUosTC?si=eac97bd5d3164a9a)
+[[index]]
+
+---
+#### # Dashboard
 
 1. [[@Software-Engineering]]
-2. [[@DataBases]]
-3. [[@Operating-Systems]]
-4. [[@Services]]
-5. [[@Definitions]]
-6. [[@Devices]]
-7. [[@Manage]]
-
+2. [[@Definitions]]
+3. [[@Technologies]]

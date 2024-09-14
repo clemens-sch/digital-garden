@@ -1,4 +1,0 @@
-#Operating-Systems  
-
-
-[[Linux]]
