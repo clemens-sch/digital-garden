@@ -116,7 +116,6 @@ console.log(string1.toLowerCase())     // javascript
 console.log(string1.substr(4,6))    // Script
 console.log(string1.substring(3))      // aScript
 
-
 console.log(string.split())     // Changes to an array -> ["30 Days Of JavaScript"]
 console.log(string.split(' '))  // Split to an array at space -> ["30", "Days", "Of", "JavaScript"]
 
@@ -142,12 +141,17 @@ console.log(string2.search('love'))          // 2
 
 let string4 = 'love'
 console.log(string4.repeat(10)) // lovelovelovelovelovelovelovelovelovelove
+
+let hello = 'hello123world456'
+console.log(hello.match(/\d))      // "1"
+console.log(hello.match(/\d/g))      // "1", "2", "3", "4", "5", "6"
 ```
 
 ---
 #### # Checking data types & Casting
 
 ##### # Check data types
+
 To check data types, we use `typeof` method.
 
 ```JavaScript
@@ -162,6 +166,7 @@ console.log(typeof null)  // object
 ```
 
 ##### # Casting
+
 Convert one data type to another
 We use `parseInt(), parseFloat(), Number()`
 
@@ -193,4 +198,3 @@ let numInt = parseInt(num2)
 console.log(numInt) // 9
 ```
 
----

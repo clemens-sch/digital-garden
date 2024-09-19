@@ -160,4 +160,3 @@ console.log(copyPerson.hasOwnProperty("skills"))
 true
 ```
 
----

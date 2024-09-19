@@ -8,6 +8,8 @@
 ---
 ## # Container and Image Data
 
+Note for layers: when the state of an Image in a .dockerfile changes - a new layer is created.
+
 ![ContainerImageData.excalidraw.svg](https://deep-thought.norwin.at//tech-kb/containers/assets/ContainerImageData.excalidraw.svg)
 
 ---
@@ -25,6 +27,7 @@ However, once a container is removed, the data will be lost.
 - Volumes are **folders on your host machine** hard drive which are **mounted** (“made available”, mapped) **into containers**.
 
 - Volumes **persist if a container shuts down**. If a container (re-)starts and mounts a volume, any data inside of that volume is **available in the container**.
+  Not only for restarting - when removing a container the data persists.
 - A container **can write** data into a volume **and read** data from it.
 
 ---
@@ -41,8 +44,11 @@ RUN npm install
 
 COPY . .
 
+# does nothing on technical layer (only for documentation purposes) 
 EXPOSE 80
 
+# docker sees this folder as volume
+# if we don't write a docker run -v ... = automatically is anonymous volume
 VOLUME [ "/app/feedback" ]
 
 CMD ["node", "server.js"]
@@ -52,6 +58,13 @@ The **VOLUME** command specifies a path inside the container that will be trea
 
 ---
 ## # Volumes & Bind Mounts
+
+- **Anonymous Volume** - we don't know where the volume in the container is
+	- <mark style="background: #D2B3FFA6;"> hardly used</mark>
+- **Named Volume** - docker automatically allocates the data at a specific destination in the container 
+	- <mark style="background: #D2B3FFA6;">mostly used</mark>
+- **Bind Mount** - specifies the destination on your host-machine, which will also be the volume for the container
+	- <mark style="background: #D2B3FFA6;">often used</mark>
 
 ```bash
 # Anonymous Volume

@@ -26,6 +26,7 @@ docker build -t helloworld:v3 .
 | -p     | port forwarding                      |
 | -it    | enter internal terminal              |
 | -d     | detached - allows writing in cmd     |
+| -v     | defines a volume                     |
 | --rm   | remove container, after it's stopped |
 | --name | give container a name                |
 
@@ -35,6 +36,11 @@ docker run -p 1000:3000 307e51e
 docker run -it node
 
 docker run -d -p 3000:3000 --rm --name mynewcontainer mynewimage
+
+# named volume
+docker run -v data:/app/data ...
+# bind mount
+docker run -v /path/to/code:/app/code
 ```
 
 ### # Docker basic Commands
@@ -79,3 +85,4 @@ EXPOSE 3000
 
 CMD [ "node", "app.mjs" ]
 ```
+
