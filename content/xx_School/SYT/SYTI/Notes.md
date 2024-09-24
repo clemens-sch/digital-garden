@@ -12,5 +12,10 @@
 
 ---
 
+Datenblatt:
+- High endurance non-volatile memory segments
+	- ...
 
+- Peripheral features
+	- USART Interface
 

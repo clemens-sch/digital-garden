@@ -35,7 +35,7 @@ df_movies.head()
 
 ```python
 title = df_movies[movie_title]
-title.info()
+type(title)
 ```
 
 ![[Pasted image 20240913161818.png]]

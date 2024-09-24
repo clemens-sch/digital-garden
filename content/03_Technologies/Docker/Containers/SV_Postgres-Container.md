@@ -16,5 +16,3 @@ docker pull postgres
 docker run --name postgres_schmid -e POSTGRES_PASSWORD=root1234 -e POSTGRES_USER=SCHMID -e POSTGRES_DB=persondb -p 5432:5432 -d postgres
 ```
 
----
-

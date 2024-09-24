@@ -23,11 +23,14 @@ import pandas as pd
 
 When writing an `?` behind a method, you get an explanation of what the specific method is doing.
 There also is the option to write `??` behind a method for getting some source-code of the function.
+Also writing `help` gives information.
 
 ```python
 df.head?
-
 df.head??
+
+help(pd.DataFrame)
+help(df_movies)
 ```
 
 ---
@@ -152,7 +155,16 @@ dtypes: float64(3), int64(4), object(4)
 memory usage: 93.8+ KB
 ```
 
----
+### # .type(...)
+
+Get type of item.
+
+```python
+type(df)
+
+# Output: pandas.core.frame.DataFrame 
+```
+
 ### # .shape()
 
 gets dimensions of a dataframe
@@ -162,6 +174,17 @@ gets dimensions of a dataframe
 df.shape()
 
 # Output: (1000, 11)
+```
+
+### # .ndim
+
+Returns an int representing the number of axes / array dimensions.
+1 = Series
+2 = DataFrame
+
+```python
+df.ndim
+# Output: 2
 ```
 
 ---
@@ -179,6 +202,21 @@ Combine two dataframes & makes sure that the index-values continue.
 
 ```python
 df_combined = pd.concat([df1, df2], ignore_index=True)
+```
+
+---
+## # Sort Output
+
+### # .sort_values()
+
+```python
+df.sort_values(by="df_column")
+
+# standard - ascending = True
+df.sort_values(by="df_column", ascending=True)
+
+# descending
+df.sort_values(by="df_column", ascending=False)
 ```
 
 ---
@@ -290,6 +328,8 @@ df.describe
 
 # get description of specific variable
 df['genre'].describe()
+
+# example: count of all, mean-value, min-value, median, ...
 ```
 
 ### # .value_counts()
