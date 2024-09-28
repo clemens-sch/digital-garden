@@ -227,6 +227,7 @@ Container-Name basically has a Hash-value. Hash from filesystem.
 ## # .Dockerignore
 
 For ignoring things in a dockerfile.
+Same as .gitignore
 
 ---
 ## # Interpreter vs Compiler

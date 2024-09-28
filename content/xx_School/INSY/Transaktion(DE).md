@@ -52,7 +52,6 @@ SUX: kann nur schreiben, wenn einziger ist
 ![[Pasted image 20240918120450.png]]
 
 ---
-
 ## # SQL - FOR UPDATE
 
 Verwendet SAX-Kompatibilitätsmatrix.

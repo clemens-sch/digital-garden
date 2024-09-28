@@ -352,30 +352,115 @@ Get:
 
 /temp & /persistent are available.
 
-
-
 ![[Pasted image 20240919144448.png]]
 
 ---
 
 - Use Docker desktop to analyse if a volume has been created.
-    
+
+Under "Volumes" we see a new volume has been created.
+
+![[Pasted image 20240925150451.png]]
+
+If we klick on it, we see the stored data inside the volume (Note: If we would stop the container - the container would be automatically removed & the volume too):
+
+![[Pasted image 20240925150553.png]]
+
+---
+
 - Stop the container (thus removing it).
-    
+
+```shell
+docker stop volumescontainer
+```
+
+Now, the container was removed:
+
+![[Pasted image 20240925150810.png]]
+
+---
+
 - Check if the volume is still there
-    
+
+As we can see, the volume gets automatically removed:
+
+![[Pasted image 20240925150920.png]]
+
+---
+
 - Start a new container and analyse if the files are still there.
-    
+
+```shell
+docker run -d -p 8080:8080 --rm --name volumescontainer volumes-container
+```
+
+There is no data inside the volume.
+
+![[Pasted image 20240925151028.png]]
+
+---
+
 - Stop the container (thus removing it).
-    
+
+```shell
+docker stop volumescontainer
+```
+
+---
+
 - Start a new container from the image using `docker run -d -p 8081:8080 -v myvolume:/app/persistent --rm --name volumescontainer volumes-exercise`
-    
+
+This runs a new container, that has a "Named Volume". We switched from "Anonymous Volume" to a "Named Volume".
+
+![[Pasted image 20240925151328.png]]
+
+As we can see, a new volume has been allocated in a specific path by docker:
+
+![[Pasted image 20240925151750.png]]
+
+---
+
 - Generate data
-    
+
+Using the API in our webbrowser [swagger](http://localhost:8081/swagger/index.html)
+- POST-Request
+
+![[Pasted image 20240925152037.png]]
+
+---
+
 - Stop and remove the container
-    
+
+```shell
+docker stop volumescontainer
+```
+
+---
+
 - Check if the volume is still there
-    
+
+The volume is still there (Status "in use" switches to "-", since no container uses the volume)
+
+![[Pasted image 20240925152139.png]]
+
+Note: The data persists.
+
+![[Pasted image 20240925152251.png]]
+
+---
+
 - Start a new container from the image using `docker run -d -p 8081:8080 -v myvolume:/app/persistent --rm --name volumescontainer volumes-exercise`
-    
+
+![[Pasted image 20240925152624.png]]
+
+---
+
 - Check if the files are still there.
+
+The files are still there & since we refer to "myvolume", the container automatically gets our previously created "volume.txt" assigned.
+
+![[Pasted image 20240925152801.png]]
+
+Volume-Info:
+
+![[Pasted image 20240925152842.png]]

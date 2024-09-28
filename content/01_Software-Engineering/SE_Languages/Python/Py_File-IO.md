@@ -226,7 +226,7 @@ new_file_path = os.path.join(data_dir, 'new_file.txt')
 
 with open(new_file_path, 'w') as my_file:
     my_file.write('This is my first file that I wrote with Python.')
-Now go and check that there is a new_file.txt in the data directory. After that you can delete the file by:
+# Now go and check that there is a new_file.txt in the data directory. After that you can delete the file by:
 if os.path.exists(new_file_path):  # make sure it's there
     os.remove(new_file_path)
 ```
