@@ -1,94 +1,85 @@
 #Technologies 
 
----
-## # Types of data
-
-![TypesOfData.excalidraw.svg](https://deep-thought.norwin.at//tech-kb/containers/assets/TypesOfData.excalidraw.svg)
+[6-min summary](https://www.youtube.com/watch?v=p2PH_YPCsis&t=21s)
 
 ---
-## # Container and Image Data
+## Types of data
 
-Note for layers: when the state of an Image in a .dockerfile changes - a new layer is created.
-
-![ContainerImageData.excalidraw.svg](https://deep-thought.norwin.at//tech-kb/containers/assets/ContainerImageData.excalidraw.svg)
+![TypesOfData.excalidraw.svg](https://deep-thought.norwin.at/_astro/typesofdataexcalidraw.BdbiialS_1utMgb.svg)
 
 ---
-## # Container Data
+
+## Container and Image Data
+
+![ContainerImageData.excalidraw.svg](https://deep-thought.norwin.at/_astro/containerimagedataexcalidraw.3Kv1vvEt_Z1P0W5t.svg)
+
+---
+
+## Container Data
 
 Data can be stored inside containers as files, just as you would normally do on your local development machine.
 
 However, once a container is removed, the data will be lost.
 
-> Stopping and restarting a container will not delete your data within that container.
+Note
+
+Stopping and restarting a container will not delete your data within that container.
 
 ---
-## # Volumes
+
+## Volumes
 
 - Volumes are **folders on your host machine** hard drive which are **mounted** (“made available”, mapped) **into containers**.
 
+![[Pasted image 20241110195125.png]]
+
 - Volumes **persist if a container shuts down**. If a container (re-)starts and mounts a volume, any data inside of that volume is **available in the container**.
-  Not only for restarting - when removing a container the data persists.
 - A container **can write** data into a volume **and read** data from it.
 
 ---
-## # Defining Volumes
 
-```dockerfile
+## Defining Volumes
+
+```
 FROM node:14
-
 WORKDIR /app
-
 COPY package.json .
-
 RUN npm install
-
 COPY . .
-
-# does nothing on technical layer (only for documentation purposes) 
 EXPOSE 80
-
-# docker sees this folder as volume
-# if we don't write a docker run -v ... = automatically is anonymous volume
 VOLUME [ "/app/feedback" ]
-
 CMD ["node", "server.js"]
 ```
 
 The **VOLUME** command specifies a path inside the container that will be treated as a volume. The mapping to the host’s file system is defined by the **run** command when starting a container.
 
 ---
-## # Volumes & Bind Mounts
 
-- **Anonymous Volume** - we don't know where the volume in the container is
-	- <mark style="background: #D2B3FFA6;"> hardly used</mark>
-- **Named Volume** - docker automatically allocates the data at a specific destination in the container 
-	- <mark style="background: #D2B3FFA6;">mostly used</mark>
-- **Bind Mount** - specifies the destination on your host-machine, which will also be the volume for the container
-	- <mark style="background: #D2B3FFA6;">often used</mark>
+## Volumes & Bind Mounts
 
-```bash
-# Anonymous Volume
-docker run -v /app/data ...
+Terminal window
 
-# Named Volume
-docker run -v data:/app/data ...
-
-# Bind Mount
-docker run -v /path/to/code:/app/code
+```
+# Anonymous Volumedocker run -v /app/data ...
+# Named Volumedocker run -v data:/app/data ...
+# Bind Mountdocker run -v /path/to/code:/app/code
 ```
 
 ---
-## # Volumes vs. Bind Mounts
 
-![VolumesBindmounts.excalidraw.svg](https://deep-thought.norwin.at//tech-kb/containers/assets/VolumesBindmounts.excalidraw.svg)
+## Volumes vs. Bind Mounts
 
----
-## # Container / Volume Interaction
-
-![ContainerVolumeInteraction.excalidraw.svg](https://deep-thought.norwin.at//tech-kb/containers/assets/ContainerVolumeInteraction.excalidraw.svg)
+![VolumesBindmounts.excalidraw.svg](https://deep-thought.norwin.at/_astro/volumesbindmountsexcalidraw.B7sF5eqs_sPWso.svg)
 
 ---
-## # Summary
+
+## Container / Volume Interaction
+
+![ContainerVolumeInteraction.excalidraw.svg](https://deep-thought.norwin.at/_astro/containervolumeinteractionexcalidraw.BitDGX8T_1nY975.svg)
+
+---
+
+## Summary
 
 - Containers can read + write data. Volumes can help with data storage, Bind Mounts can help with direct container interaction.
 - Containers can read + write data, but written data is lost if the container is removed.

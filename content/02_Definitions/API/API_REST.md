@@ -185,6 +185,7 @@ A response consists of
 - a status code
 - response headers
 - a body
+
 ---
 ## # Status code categories
 

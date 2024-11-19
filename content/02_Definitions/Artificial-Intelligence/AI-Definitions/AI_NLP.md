@@ -3,9 +3,11 @@
 ---
 ## # What is NLP
 
-`Natural Language Processing`
+Natural Language Processing
 
 - Subfield of [[@AI]]
+
+![[Pasted image 20241024220313.png]]
 
 NLP is used that computers understand unstructured text
 - because humans don't communicate with numbers, ...

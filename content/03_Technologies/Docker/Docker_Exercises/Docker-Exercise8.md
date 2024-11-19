@@ -2,9 +2,9 @@
 
 ---
 
-![TodosAppAdvanced.excalidraw.svg](https://deep-thought.norwin.at//tech-kb/containers/assets/TodosAppAdvanced.excalidraw.svg)
+![[todosappadvancedexcalidraw.BvKDHmHX_1K1jB9.svg]]
 
-Extend your application from [Docker Exercise 7](https://deep-thought.norwin.at/tech-kb/containers/exercises/Docker-Exercise-7/). Add a new functionality that allows the generation of PDF documents, so you can print your TODO-Lists.
+Extend your application from [[Docker-Exercise7]]. Add a new functionality that allows the generation of PDF documents, so you can print your TODO-Lists.
 
 Add a new button to your web application that starts the PDF generation for your Todo List. When pressing the button, send a message to a container that runs a message-oriented middleware. I recommend using a RabbitMQ image from Docker Hub.
 

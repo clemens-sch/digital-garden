@@ -232,7 +232,7 @@ Exactly, our container was deleted automatically when it got stopped.
 
 - Define a volume inside the container, adding this line to the Dockerfile: `VOLUME ["/app/persistent"]`
 
-With the specified volume, files are not saved in the container-filesystem, they are saved in a volume ouside of the container.
+With the specified volume, files are not saved in the container-filesystem, they are saved in a volume outside of the container.
 
 new dockerfile:
 

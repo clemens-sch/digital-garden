@@ -54,6 +54,15 @@ We could also _create own index when initializing the dataframe_:
 ```python
 purchases = pd.DataFrame(data, index=['June', 'Robert', 'Lily', 'David'])
 ```
+
+### # Add specific column-name
+
+- ..., columns=...
+
+```python
+df_tweets = pd.DataFrame(tweets_lower, columns=["tweets"])
+```
+
 ---
 ## # Read data
 

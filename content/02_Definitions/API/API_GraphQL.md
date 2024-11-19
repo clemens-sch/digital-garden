@@ -6,6 +6,7 @@
 ## # What is GraphQL?
 
 - Yet another communication standard
+	- Communication language for the web
 - Mainly for client ⇔ server
 - GraphQL is typically served over HTTP
     - Contrary to REST we use a single endpoint

@@ -13,3 +13,19 @@
 - LED
 	- Temperator == Entfernung
 
+---
+Teams-Aufgabe
+
+Ultraschallsensor - 0-5V
+0 - 1023
+
+ADC retourniert Ganzzahl --> wir wandeln Int in String um
+- SYTI4 > ADC > Bsp. f. itoa
+
+sprintf() = konstanter Wert + Value
+itoa(errechnerter Ultraschallsensor-wert, buffer, 10);
+- 512 = ASCII - 51 49 50
+
+alle 2000 Millisekunden messen (vlt timer/delay)
+- wert über USART übertragen
+- abgabe: main.c

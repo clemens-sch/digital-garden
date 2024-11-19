@@ -15,6 +15,7 @@
 | R   | Remote    |
 | P   | Procedure |
 | C   | Calls     |
+g = Google
 
 ---
 ## # What is it used for?
@@ -53,7 +54,7 @@ MethodCall()ResponseMethodCall()ResponseClient AC#Client BC++ServerC#
 ---
 ## # Message Format
 
-By default gRPC uses [Protocol Buffers](https://protobuf.dev/)
+By default, gRPC uses [Protocol Buffers](https://protobuf.dev/)
 
 ```proto
 // This is how you define services and message types.
