@@ -39,7 +39,7 @@ Schwächen von **Koppelung**
 ### # Open Closed Prinzip
 
 Steht eigentlich für "**Open** for **Extension** but **Closed** for **Modification**"
-Ist mein Code erweiterbar, ohne dass das vorher definierte geändert wird.
+Ist mein Code erweiterbar, ohne dass das vorher definierte geändert wird?
 
 Prinzip kann aufgelöst werden mit: Interface, Basisklasse
 
@@ -87,36 +87,55 @@ class AreaCalculator
 }
 ```
 
+mit abstrakter Basisklasse:
+
 ```csharp
-abstract class Shape 
-{ 
-	public abstract double CalculateArea(); 
-} 
+public abstract class Shape  
+{  
+    public abstract double CalculateArea();  
+}  
+  
+public class Circle(double radius) : Shape  
+{  
+    private double Radius { get; set; } = radius;  
+    public override double CalculateArea() => Radius * Radius * Math.PI;  
+}  
+  
+public class Square(double sideLength) : Shape  
+{  
+    private double Sidelength { get; set; } = sideLength;  
+    public override double CalculateArea() => Sidelength * Sidelength;  
+}  
+  
+public static class AreaCalculator  
+{  
+    public static double CalculateArea(Shape shape) => shape.CalculateArea();  
+}
+```
 
-class Circle : Shape 
-{ 
-	public double Radius { get; set; } 
-	public override double CalculateArea() 
-	{ 
-		return Radius * Radius * Math.PI; 
-	} 
-} 
+mit Interface:
 
-class Square : Shape 
-{ 
-	public double SideLength { get; set; } 
-	public override double CalculateArea() 
-	{ 
-		return SideLength * SideLength; 
-	} 
-} 
-
-class AreaCalculator 
-{ 
-	public double CalculateArea(Shape shape)
-	{ 
-		return shape.CalculateArea(); 
-	} 
+```csharp
+public interface IShape  
+{  
+    double CalculateArea();  
+}  
+  
+public class Circle(double radius) : IShape  
+{  
+    private double Radius { get; set; } = radius;  
+    public double CalculateArea() => Radius * Radius * Math.PI;  
+}  
+  
+public class Shape(double sideLength) : IShape  
+{  
+    private double SideLength { get; set; } = sideLength;  
+    public double CalculateArea() => SideLength * SideLength;  
+}  
+  
+public static class CalcAreaOfShape  
+{  
+    public static double CalcArea(IShape shape) => shape.CalculateArea();  
 }
 ```
 
