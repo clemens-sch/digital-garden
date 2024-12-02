@@ -1,5 +1,0 @@
-#school 
-
-----
-## # Assignment
-

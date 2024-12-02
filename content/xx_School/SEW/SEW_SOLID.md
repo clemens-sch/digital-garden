@@ -1,9 +1,11 @@
 #school 
 
+[YT-Video](https://www.youtube.com/watch?v=kF7rQmSRlq0)
+
 ---
 ## # Softwarequalität
 
-**SOLID** = steht für solide Grundprinzipe, an die man sich beim Schreiben von Code halten sollte
+**SOLID** = steht für solide Grundprinzipien, an die man sich beim Schreiben von Code halten sollte
 
 1. Single Responsibility Prinzip
 2. Open Closed Prinzip
@@ -16,32 +18,30 @@
 
 Jedes Softwareelement implementiert nur einen Aspekt. Siehe [[SEW_Softwaremetriken]]
 - erhöht Wartbarkeit
+- vermeiden v. Merge-Conflict
 
-Bsp.: Eine Klasse kümmert sich nur um eine Aufgabe - nicht um mehr!
+Eine Klasse kümmert sich nur um eine Aufgabe bzw. alles was die Klasse machen soll sollte von der Aufgabe her sehr nahe beinander liegen.
 
----
-### # Interface Segregation Prinzip
+Dieses Beispiel würde das Single Responsibility Prinzip brechen:
 
-[CQRS](https://entwickler.de/software-architektur/gemeinsam-mehr-erreichen-001)
-
-Interface - so "schlank" wie nötig. Eine bestimmte Teilaufgabe soll abgedeckt werden.
-Weil eine Klasse könnte mehrere Interfaces implementieren. 
-
-Bsp.: Datenzugriffsschicht - CRUD-Methoden (wir geben CRUD-Methoden in Interface)
-- beide Methoden können gleiches Interface implementieren: IDatenzugriff
-- IDatenzugriff unterteilen - IReadDatenzugriff, IWriteDatenzugriff
-- je nachdem was Verwender benötigt muss daher nicht alles implementiert werden
-
-Verstärkung von **Kohäsion**
-Schwächen von **Koppelung**
+```csharp
+public class Student
+{
+	public int StudentId { get; set; }
+	public string Name { get; set; }
+	public void SaveToDb() { ... }
+	public void SendEmail() { ... }
+	public void EnrolToCourse() { ... }
+}
+```
 
 ---
 ### # Open Closed Prinzip
 
-Steht eigentlich für "**Open** for **Extension** but **Closed** for **Modification**"
-Ist mein Code erweiterbar, ohne dass das vorher definierte geändert wird?
+"**Open** for **Extension** but **Closed** for **Modification**"
+Ziel: erweiterbarer Code, ohne dass vorher geschriebenes geändert wird.
 
-Prinzip kann aufgelöst werden mit: Interface, Basisklasse
+Prinzip kann aufgelöst werden durch: Interfaces, Basisklassen.
 
 Im Code-Bsp. in Skriptum>rechts: Es muss nur um eine Methode erweitert werden. 
 
@@ -50,7 +50,7 @@ Im Code-Bsp. in Skriptum>rechts: Es muss nur um eine Methode erweitert werden.
 // Erweiterung
 public class TypeFilter : Predicate<Apple> {...}
 ...
-// Bestehender Code muss nicht erweitert werden
+// Bestehender Code muss nicht verändert werden
 ```
 
 ```csharp
@@ -142,18 +142,97 @@ public static class CalcAreaOfShape
 ---
 ### # Liskovsche Substitutionsprinzip
 
-Alles was in Basisklasse definiert/da ist, sollte in den abgeleiteten Klassen auch da sein.
-Für Verwender einer Klasse muss egal sein, ob Basisklasse oder abgeleitete Klasse.
+Alles was in Basisklasse definiert/da ist, sollte in den abgeleiteten Klassen Sinn machen.
+Instanzen einer abgeleiteten Klasse müssen sich genauso verhalten wie Objekte der Basisklasse.
+Verwender muss es egal sein, ob Basisklasse oder abgeleitete Klasse.
+
 Wird oft bei falschen Vererbungshierarchien verletzt.
 
-Bsp.: Datenzugriffsschicht - eine Klasse mit Speichern
-- abgeleitete Klasse: speichert in rel. DB
-- abgeleitete Klasse: speichert in Dateisystem
-- Verwender von abgeleiteter Klasse muss es egal sein, ob es eine Basisklasse oder abgeleitete Klasse ist. 
+Bsp. von Verstoß gg. Liskovsches Substitutions-Prinzip:
+
+```csharp
+public class Parent
+{
+	public void Eat() {...}
+	public void Sleep() {...}
+	public void GoToWork() {...}
+	public void MakeDinner() {...}
+}
+
+public class Child : Parent
+{...}
+```
+
+korrekte Lösung:
+
+```csharp
+public class Human
+{
+	public void Eat() {...}
+	public void Sleep() {...}
+}
+
+public class Parent : Human
+{
+	public void GoToWork() {...}
+	public void MakeDinner() {...}
+}
+
+public class Child : Human
+{
+	public void PlayWithToys() {...}
+}
+```
+
+---
+### # Interface Segregation Prinzip
+
+[CQRS](https://entwickler.de/software-architektur/gemeinsam-mehr-erreichen-001)
+
+Interface - so "schlank" wie nötig. Eine bestimmte Teilaufgabe soll abgedeckt werden.
+> Natürlich das  ganze sollte man auch nicht übertreiben.
+
+Eine Klasse könnte mehrere Interfaces implementieren. 
+
+Bsp.: Datenzugriffsschicht - CRUD-Methoden (wir geben CRUD-Methoden in Interface)
+- beide Methoden können gleiches Interface implementieren: IDatenzugriff
+- IDatenzugriff unterteilen - IReadDatenzugriff, IWriteDatenzugriff
+- je nachdem was Verwender benötigt, muss daher nicht alles implementiert werden
+
+Anstatt einem Interface:
+
+```csharp
+public interface IWorker 
+{ 
+	void Work(); 
+	void Manage(); 
+	void Report(); 
+}
+```
+
+Unterteilen in mehrere Interfaces:
+
+```csharp
+public interface IWorker 
+{ 
+	void Work(); 
+} 
+
+public interface IManager 
+{ 
+	void Manage(); 
+} 
+
+public interface IReporter 
+{ 
+	void Report(); 
+}
+```
 
 ---
 ### # Dependency Inversion Prinzip
 
+"Higher Level components should not depend on lower Level components - both should depend on the interface"
 Keine direkte Abhängigkeit zw. Data Access & Business Logic 
 
 ![[SEW_SOLID 2024-11-19 09.09.20.excalidraw]]
@@ -165,7 +244,7 @@ interface IMessageService
     void SendMessage(string message);
 }
 
-// Konkrete Implementierungen
+// lower order
 class EmailService : IMessageService
 {
     public void SendMessage(string message)
@@ -174,6 +253,7 @@ class EmailService : IMessageService
     }
 }
 
+// lower order
 class SmsService : IMessageService
 {
     public void SendMessage(string message)
@@ -182,7 +262,7 @@ class SmsService : IMessageService
     }
 }
 
-// Hochrangiges Modul
+// higher order
 class Notification
 {
     private readonly IMessageService _messageService;
@@ -198,4 +278,3 @@ class Notification
     }
 }
 ```
-
