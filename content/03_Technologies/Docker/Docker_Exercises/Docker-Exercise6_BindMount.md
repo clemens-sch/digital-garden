@@ -44,21 +44,15 @@ Dockerfile
 
 ```Dockerfile
 FROM node:14
-
 WORKDIR /app
-
 COPY package.json .
 
 RUN npm install
-
 COPY . .
 
 ARG DEFAULT_PORT=80
-
 ENV PORT $DEFAULT_PORT
-
 EXPOSE $PORT
-
 CMD [ "npm", "start" ]
 ```
 
@@ -157,13 +151,10 @@ PORT=8000
 
 ```dockerfile
 FROM node:14
-
 WORKDIR /app
-
 COPY package.json .
 
 RUN npm install
-
 COPY . .
 
 # define build-variable (only in docker-build process available)
@@ -172,7 +163,6 @@ ARG DEFAULT_PORT=80
 ENV PORT $DEFAULT_PORT
 # tells docker, which port is used in container
 EXPOSE $PORT
-
 CMD [ "npm", "start" ]
 ```
 

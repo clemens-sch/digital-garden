@@ -101,6 +101,8 @@ docker run -p 3000:3000 307e51e
 ```
 
 You can then open the app on port 3000 of your local machine.
+
+---
 ## # Try using different ports
 
 Specify different ports for both the exposed container port aswell as the host port.
@@ -111,11 +113,13 @@ Specify different ports for both the exposed container port aswell as the host p
 docker run -p 4010:3010 38c86108
 ```
 
+---
 ## # Make a change
 
 Change the HTML output from the web server to something else. Run the container again and make sure you see the changes.
 - Here you also have to rebuild the container
 
+---
 ## # Optimize the Dockerfile
 
 Make sure that `npm install` only executes when the package.json file changes.

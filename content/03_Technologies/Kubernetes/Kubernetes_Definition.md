@@ -98,3 +98,52 @@ Storage on local machine.
 
 ---
 ## # Demo-Project
+
+mongo-config.yaml:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  mongo-url: mongo-service
+```
+
+Secret:
+
+```yaml
+
+```
+
+Deployment - MongoDB:
+
+```yaml
+
+```
+
+Deployment - WebApp:
+
+```yaml
+
+```
+
+
+Terminal:
+
+```bash
+kubectl apply -f mongo-config.yaml 
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml 
+kubectl apply -f webapp.yaml 
+
+kubectl get all
+
+kubectl --help
+kubectl get --help
+kubectl describe service ...
+
+kubectl get svc
+minikube ip
+```
+

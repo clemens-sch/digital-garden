@@ -49,3 +49,38 @@ Wichtige Register sind:
 - ADPS - ADC Prescaler Select Bits
 
 ---
+### # ADC-Statusabfrage + Single-Conversion
+
+```c
+ADCSRA |= (1<<ADEN) | (1<<ADPS0) | (1<<ADPS1) | (1<<ADPS2);
+
+while (1)
+{
+	ADCSRA |= (1<<ADSC);
+	// Warten, bis Messung abgeschlossen...
+	while (ADCSRA & (1<<ADSC));
+	// Messung fertig, Ergebnis auslesen
+	tmp = ADCW;
+}
+
+// ADC - liefert 10-Bit Wert = 16Bit Variable
+volatile uint16_t tmp;
+main() {
+	// Single-Conversion mit ISR
+	// Free Running mit ISR
+	ADCSRA |= (1<<ADEN) | (1<<ADIE) | (1<<ADATE) | (1<<ADPS0) | (1<<ADPS1) | (1<<ADPS2);
+	ADCSRA |= (1<<ADSC);
+	
+	while(1)
+	{
+		// do sth -auf tmp zugreifen (ATOMIC BLOCK verwenden) & weitere Messung starten
+		// unser Controller hat 8 Bit Takt - wollen in 16 Bit Variable zuweisen = ATOMIC BLOCK = wird nicht unterbrochen
+		if()
+	}
+}
+
+// ISR - so kurz wie möglich halten!
+ISR(ADC_vect){
+	tmp = ADCW;
+}
+```
