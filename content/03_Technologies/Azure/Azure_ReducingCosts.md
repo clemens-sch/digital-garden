@@ -29,4 +29,10 @@ scaling in
 - Defining Policies
 - Scale to the right tiers
 - Clean up unused resources
-- 
+- Autoscaling (in/down)
+
+---
+## # SettingUp Budget
+
+- Starterset>Budget-8€/Monat>Alert Conditions: Actual>% of budget: 80>Amount: 8>Alert recipients: c.schmid@htlkrems.at>Language: Default>Create
+
