@@ -43,7 +43,8 @@ df["tweets"] = df["tweets"].str.replace("[^\\w\\s+]", "", regex=True)
 Seperate the text to "Tokens" (one sentence - seperated word by word)
 
 - NLTK
-- spaCy
+- [[Py_spaCy]]
+	- [spaCy-YT Tutorial](https://www.youtube.com/watch?v=_lR3RjvYvF4)
 
 ---
 ### # Stopwords
